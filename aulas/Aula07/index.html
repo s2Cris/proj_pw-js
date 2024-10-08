@@ -1,0 +1,48 @@
+<html lang="pt-br"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FormTable</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="formulario.js"></script>
+</head>
+<body>
+    <h1>Formulário com tabela</h1>
+    <hr>
+    <br>
+    <table>
+    <th>
+    <form id="linhaForm">
+        <input type="number" name="A" id="A" placeholder="Digite o A" required>
+        <br><br>
+
+        <input type="number" name="B" id="B" placeholder="Digite o B" required>
+        <br><br>
+
+        <input type="number" name="C" id="C" placeholder="Digite o C" required>
+        <br><br>
+
+        <input type="number" name="X" id="X" placeholder="Digite 1 para x' e 2 para x''" required>
+        <br><br>
+
+        <br>
+
+        <button type="button" onclick="adicionarLinha()">Calcular</button>
+    </form>
+    <br><br>
+    <table id="tabela">
+        <thead>
+            <tr>
+                <th>Nº </th>
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+                <th>X</th> 
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    </table>
+    </th>
+</body>
+</html>
