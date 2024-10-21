@@ -1,48 +1,46 @@
-<html lang="pt-br"></html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FormTable</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="formulario.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <title>Aula 04 - Formulário em JS</title>
 </head>
 <body>
-    <h1>Formulário com tabela</h1>
+
+    
+
+    <h1>Formulário em Java Script</h1>
     <hr>
-    <br>
-    <table>
-    <th>
-    <form id="linhaForm">
-        <input type="number" name="A" id="A" placeholder="Digite o A" required>
+    <form id="LinhaForm">
+        <input type="text" name="nome" id="nome" placeholder="Digite seu Nome" required>
         <br><br>
-
-        <input type="number" name="B" id="B" placeholder="Digite o B" required>
+        <input type="number" name="idade" id="idade" placeholder="Digite sua Idade" required>
         <br><br>
-
-        <input type="number" name="C" id="C" placeholder="Digite o C" required>
+        <label for="admissao">Admissão</label>
+        <input type="date" name="admissao" id="admissao" required>
         <br><br>
-
-        <input type="number" name="X" id="X" placeholder="Digite 1 para x' e 2 para x''" required>
+        <label for="demissao">Demissão</label>
+        <input type="date" name="demissao" id="demissao">
         <br><br>
-
-        <br>
-
-        <button type="button" onclick="adicionarLinha()">Calcular</button>
-    </form>
-    <br><br>
-    <table id="tabela">
-        <thead>
-            <tr>
-                <th>Nº </th>
-                <th>A</th>
-                <th>B</th>
-                <th>C</th>
-                <th>X</th> 
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
-    </table>
-    </th>
+        <button type="button" onclick="adicionarlinha()">Adicionar</button>
+    
+    </form> 
+        <br><br>
+        <table id="tabelaDados">
+            <thead>
+               <tr>
+                   <th>Id</th>      
+                   <th>Nome</th>
+                   <th>Idade</th>
+                   <th>Admissão</th>
+                   <th>Demissão</th>
+               </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <script src="./js/formulario.js"></script>
+        <script scr="./js/bootstrap.bundle.min.js"></script>
 </body>
-</html>
+</html> 
