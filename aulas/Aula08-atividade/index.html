@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando Tabela com JQuery</title>
+    <style>
+        table {
+            width: 25%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid black;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        .new-row {
+            background-color: rgb(140, 53, 202);
+            color: rgb(167, 114, 206);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="mt-2">
+        <h1 style="text-align: center;">Adicionar Linha com Animação</h1>
+    </div>
+
+    <hr style="margin-left: 10%; margin-right: 10%;">
+
+
+    <form id="form-add-row" style="text-align: center;">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+        <button type="submit">Adicionar</button>
+    </form>
+
+    <br>
+    <br>
+
+    <table id="tabela" style="margin-left: 38%;">
+        <thead>
+            <tr>
+                <th style="text-align: center;">Nome</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#form-add-row').on('submit', function (event) {
+                event.preventDefault();
+                var nome = $('#nome').val();
+                var newRow = $('<tr class="new-row"><td>' + nome + '</td></tr>');
+                $('#tabela tbody').append(newRow);
+                newRow.hide().fadeIn(1000, function () {
+                    $(this).removeClass('new-row');
+                });
+                $('#nome').val('');
+            });
+        });
+    </script>
+</body>
+
+</html>
